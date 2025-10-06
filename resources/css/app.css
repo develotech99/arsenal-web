@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-white text-arsenal-black;
+  }
+}
+
+@layer components {
+  /* Botones personalizados */
+  .btn-gold {
+    @apply bg-arsenal-gold hover:bg-arsenal-dark-gold text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-outline-gold {
+    @apply border-2 border-arsenal-gold text-arsenal-gold hover:bg-arsenal-gold hover:text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300;
+  }
+
+  /* Cards de productos */
+  .product-card {
+    @apply bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1;
+  }
+
+  /* Sección hero */
+  .hero-gradient {
+    background: linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 50%, #2A2A2A 100%);
+  }
+
+  /* Línea decorativa dorada */
+  .gold-divider {
+    @apply h-1 w-20 bg-arsenal-gold mx-auto rounded-full;
+  }
+}
+
+/* Animaciones personalizadas */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8941F;
+}
